@@ -4,9 +4,7 @@ import {GenerateNotificationComponent} from './generate-notification/generate-no
 import {ScheduleNotificationsComponent} from './schedule-notifications/schedule-notifications.component'
 
 const routes: Routes = [
-  {path:'',component:GenerateNotificationComponent},
-  {path:'schedule',component:ScheduleNotificationsComponent},
-  {path:'generate',component:GenerateNotificationComponent}
+ 
 ];
 
 @NgModule({

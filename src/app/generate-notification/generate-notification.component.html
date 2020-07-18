@@ -1,5 +1,5 @@
 
-<br>
+<!-- <br>
 <br>
 
 
@@ -15,5 +15,31 @@
     <div class="form-group">
         <button class="btn btn-success btn-lg center-block" (click)="generate(notification.value)">Generate notification</button>
     </div>
-</form>
+</form> -->
 
+
+
+<mat-card class="generate-form">
+    <mat-card-title>
+        Generate Notification
+    </mat-card-title>
+    <mat-card-content>
+        <form action="">
+            <div class="parent">
+            <div class="input_generate">
+               <mat-form-field class="inputText">
+                <mat-label>Notification Details</mat-label>
+                <input matInput class="">
+                
+              </mat-form-field> 
+            </div>
+            
+              <div class="button_submit">
+                   <button mat-raised-button color="primary">Generate</button>
+              </div>
+            </div>
+            
+             
+        </form>
+    </mat-card-content>
+</mat-card>
