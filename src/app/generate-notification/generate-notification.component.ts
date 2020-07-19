@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable} from 'rxjs'
+import {Observable} from 'rxjs';
+import { FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-generate-notification',
   templateUrl: './generate-notification.component.html',
@@ -15,31 +16,22 @@ export class GenerateNotificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
+generateNotification(input:string){
 
-  notification:string;
-  TimeStamp:any;
-generate(noti:string,time=null){
-this.notification = noti;
-this.TimeStamp = time;
-this.http.post<any>('http://localhost:3000/posts',{title:'test'}).subscribe(data =>{
-  this.notification = data.notification;
- this.TimeStamp = data.TimeStamp;
-
-
- this.sendPostRequest(noti).subscribe(
-  res => {
-    console.log(res);
-  }
-);
-
-
-})
-
-} //generate end
-
-sendPostRequest(data: any): Observable<any> {
-  return this.http.post<any>('http://localhost:3000/posts',data);
+ var notification = {
+  "notification_message": input
+ }
+  const body=JSON.stringify(notification);
+    console.log(body)
+    this.http.post('http://13.232.65.18:9000/notifications/generate' ,body).subscribe(
+    data =>{
+      console.log(data);
+    }
+    )
 }
+
+ 
 
 
 }
