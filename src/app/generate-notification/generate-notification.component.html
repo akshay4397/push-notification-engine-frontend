@@ -1,25 +1,20 @@
-
-<mat-card class="generate-form">
+<mat-card class="notification-generate-form">
     <mat-card-title>
         Generate Notification
     </mat-card-title>
     <mat-card-content>
         <form action="">
             <div class="parent">
-            <div class="input_generate">
-               <mat-form-field class="inputText">
-                <mat-label>Notification Details</mat-label>
-                <input matInput class="" #input>
-                
-              </mat-form-field> 
+                <div class="input-wrapper">
+                    <mat-form-field class="custom-input">
+                        <mat-label>Notification Message</mat-label>
+                        <input matInput #input>
+                    </mat-form-field>
+                </div>
             </div>
-            
-              
-            </div>
-            
-             
-        </form><div class="button_submit">
-                   <button mat-raised-button color="primary" (click)="generateNotification(input.value)">Generate</button>
-              </div>
+        </form>
+        <div class="button-wrapper">
+            <button mat-raised-button color="primary" (click)="generateNotification(input.value)">Generate</button>
+        </div>
     </mat-card-content>
 </mat-card>

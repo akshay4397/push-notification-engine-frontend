@@ -1,17 +1,17 @@
-.main
+.container
 {
     width: 100%;
     flex-direction: row;
     display: flex;
    
 }
-.form1
+.notification-generation-form
 {
     width: 50%;
     padding: 10px;
 
 }
-.form2
+.notification-scheduler-form
 {
     width: 50%;
     padding: 10px;

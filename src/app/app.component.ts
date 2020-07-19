@@ -5,8 +5,5 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  
-constructor(private http : HttpClient){
-
-}
+  constructor() { }
 }

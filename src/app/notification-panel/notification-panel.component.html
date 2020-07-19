@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="notification-box-header">
+        <span matBadge="{{notifications.length}}" matBadgeOverlap="false"><b>Notifications</b></span>
+    </div>
+    <div class="notification-box">
+        <div *ngFor="let notification of notifications" class="notification-card-div">
+            <mat-card>
+                <mat-card-title>
+                    {{notification.message}}
+                </mat-card-title>
+                <mat-card-footer class="notification-footer">
+                    {{calculateTimePassed(notification.timestamp)}}
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+</div>

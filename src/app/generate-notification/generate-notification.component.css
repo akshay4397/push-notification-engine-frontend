@@ -1,27 +1,24 @@
-.parent{
+.parent {
     display: flex;
     flex-direction: column;
 }
 
-.input_generate
-{
+.input-wrapper {
     width: 100%;
-   
     padding: 10px;
 }
-.inputText
-{
+
+.custom-input {
     width:100%;
 }
-.button_submit
-{
+
+.button-wrapper {
     width: 100%;
-   
     padding: 10px;
     text-align: center;
 }
-.generate-form
-{
+
+.notification-generate-form {
     height: 100%;
     justify-content: space-around;
 }
